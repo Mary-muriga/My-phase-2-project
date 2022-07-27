@@ -1,13 +1,93 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h1, h2, h3 {
+ 
+   margin: 8.25px 0;
+}
+
+h1 {
+  font-size: 18px;
+  color: blanchedalmond;
+}
+
+h2 {
+ font-size: 16.5px;
+ color:blanchedalmond
+
+}
+h3 {
+ font-size: 14px;
+ color:black
+}
+
+a {
+ text-decoration: none;
+ color: antiquewhite;
+}
+
+.row {
+ display: flex;
+ justify-content: space-between;
+}
+
+.col-1{
+ flex: 1;
+}
+
+.col-2 {
+ flex: 2;
+ text-align: center;
+}
+.col-3 {
+  flex: 3;
+  text-align: left;
+}
+
+.block {
+background-color: rgb(93, 119, 194);
+padding: 16px;
+margin: 11.2px;
+border-radius: 16px;
+
+}
+
+.row.center {
+ align-items: right; 
+}
+
+.img{
+  max-width: 80px;
+}
+
+button { 
+  font-size: 12.8px;  
+  padding: 3.2px;
+  margin: 1.6px;
+  border-radius: 1.0rem;
+  background-color: rgb(240, 142, 15);
+  width: 35%;
+  cursor: pointer;
+}
+button.add {
+  background-color: rgb(197, 207, 207);
+  width: 24px;
+  border-radius: 8px;
+}
+
+button.remove {
+  background-color: rgb(187, 92, 116);
+  width: 24px;
+  border-radius: 8px;
+}
+
+button.badge {
+  background-color: rgb(241, 19, 74);
+  width: 24px;
+  color: white;
+  border-radius: 8px;
+}
+.text-right{
+  text-align: right;
 }
