@@ -2,8 +2,8 @@ import React from "react";
 import Navbar from "./Components/Navbar";
 import Cart from "./Components/Cart";
 import { useEffect, useState } from "react";
-import {BrowserRouter as Router,Routes, Route} from "react-router-dom";
-import Login from "./Components/Login";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+//import Login from "./Components/Login";
 import Home from "./Components/Home";
 import Header from "./Components/Header";
 import Main from "./Components/Main";
@@ -11,72 +11,45 @@ import AddProductForm from "./Components/AddProductForm";
 
 import "./index.css";
 
-function App() {
-
+function App(props) {
   const [products, setProducts] = useState([]);
-  const [cartItems, setCartItems] = useState([])
-  
-  useEffect(() => {
+  const { onAdd, onRemove, cartItems } = props;
 
+  useEffect(() => {
     fetch("https://simpleshoppingapi.herokuapp.com/cars")
       .then((response) => response.json())
       .then((products) => setProducts(products));
   }, []);
-   console.log(products)
-
-   const onAdd =(product) => {
-    const exist = cartItems.find((x) => x.id === product.id);
-    if (exist) {
-      setCartItems(
-        cartItems.map((x) => 
-        x.id === product.id ? {...exist, qty: exist.qty + 1}: x)
-      )
-    } else {
-      setCartItems([...cartItems, {...product, qty: 1}])
-    }
-   }
-   const onRemove = (product) => {
-   const exist = cartItems.find((x) => x.id === product.id);
-   if (exist.qty === 1) {
-     setCartItems(
-       cartItems.filter((x) => 
-       x.id !== product.id));
-   } else {
-     setCartItems( cartItems.map((x) => x.id === product.id ? {...exist, qty: exist.qty-1} : x)
-     );
-    }
-
-    
-
-  };
-
-
-return(
-
-
-<div className="App">   
- 
-
-<Router>
-  <div>
-    <Navbar />
-  </div>
-  <Routes>
-    <Route exact path="/" element={<Home />}/>
-    <Route exact path="/login" element={<Login />}/>
-    <Route exact path="/main" element={<Main products={products} onAdd={onAdd} />}/>
-  </Routes>
-  </Router>
-  <div>
-  <Cart onAdd={onAdd} onRemove={onRemove} cartItems={cartItems}/>
-  <AddProductForm />
-  </div>
-  </div>
-
-)
+  //console.log(products)
 
   
-  
+
+  return (
+    <div className="App">
+      <Router>
+        <div>
+          <Navbar />
+        </div>
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="/AddProductForm" element={<AddProductForm />} />
+          {/* <Route exact path="/login" element={<Login />}/> */}
+          <Route
+            exact
+            path="/main"
+            element={<Main products={products} onAdd={onAdd} />}
+          />
+          <Route
+            exact
+            path="/cart"
+            element={
+              <Cart onAdd={onAdd} onRemove={onRemove} cartItems={cartItems} />
+            }
+          />
+        </Routes>
+      </Router>
+    </div>
+  );
 }
 
 export default App;

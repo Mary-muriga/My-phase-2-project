@@ -1,14 +1,42 @@
-import React from "react";
+
+
+import  {useState} from "react";
+
 
 function Cart(props) {
-  const { cartItems, onAdd, onRemove } = props;
+ // const { cartItems} = props;
   const itemsPrice = cartItems.reduce((d, c) => d + c.price * c.qty, 0);
   const taxPrice = itemsPrice * 0.14;
   const shippingPrice = itemsPrice > 2000 ? 0 : 50;
   const totalPrice = itemsPrice + taxPrice + shippingPrice;
+  
+  const [cartItems, setCartItems] = useState([])
+
+  const onAdd =(product) => {
+    const exist = cartItems.find((x) => x.id === product.id);
+    if (exist) {
+      setCartItems(
+        cartItems.map((x) => 
+        x.id === product.id ? {...exist, qty: exist.qty + 1}: x)
+      )
+    } else {
+      setCartItems([...cartItems, {...product, qty: 1}])
+    }
+   }
+   const onRemove = (product) => {
+   const exist = cartItems.find((x) => x.id === product.id);
+   if (exist.qty === 1) {
+     setCartItems(
+       cartItems.filter((x) => 
+       x.id !== product.id));
+   } else {
+     setCartItems( cartItems.map((x) => x.id === product.id ? {...exist, qty: exist.qty-1} : x)
+     );
+    }
 
   return (
-    <aside className="block col-1">
+  
+      <div>
       <h2> Cart Items</h2>
       <div>
         {cartItems.length === 0 && <div>Cart Is Empty</div>}
@@ -56,17 +84,18 @@ function Cart(props) {
               </div>
             </div>
             <hr/>
-            <div className="row ">
-              <button onClick={() => alert('edit me please')}>
+            {/* <div className="row ">
+              <button onClick={() => alert('Thanks')}>
                 Checkout
-              </button>
-            </div>
+              </button> */}
+            {/* </div> */}
           </>
         )}
       </div>
-    </aside>
+      </div>
+    
   );
 }
-
+}
 export default Cart;
 

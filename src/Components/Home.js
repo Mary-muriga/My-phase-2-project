@@ -4,7 +4,7 @@ function Home() {
   
   return (
     <div>
-      <h2>Welcome to Simple Shopping Cart</h2>
+      <h1>Welcome to Simple Shopping Cart</h1>
       </div>
   );
 }

@@ -11,9 +11,13 @@ function Navbar() {
         <Link className="nav-link" to="/main">
           SHOWROOM
         </Link>
+
+        <Link className="nav-link" to="/AddProductForm">
+          ADD PRODUCT
+        </Link>
       
-        <Link className="nav-link" to="/Login">
-          LOGIN
+        <Link className="nav-link" to="/Cart">
+          CART ITEMS
         </Link>
 
         
