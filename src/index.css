@@ -12,10 +12,6 @@ body{
   justify-content: space-between;
   border-radius: 16px;
 }
-.nav-item{
-  display: flex;
- color: black;
-}
 
 h1, h2, h3 {
    

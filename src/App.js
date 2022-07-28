@@ -48,18 +48,16 @@ function App() {
   };
 
 
-
-
-
-
 return(
 
-<div>
-<Navbar countCartItems={cartItems.length}></Navbar>
-      <div className="row">
-        <Home onAdd={onAdd} products={products}></Home>
-        <Cart onAdd={onAdd} onRemove={onRemove} cartItems={cartItems}></Cart>
-      </div>
+
+<div className="App">    
+
+<Header countCartItems={cartItems.length}></Header>
+<div className="row">
+  <Main onAdd={onAdd} products={products}></Main>
+  <Cart onAdd={onAdd} onRemove={onRemove} cartItems={cartItems}></Cart>
+</div>
 
   <Router>
   <div>
@@ -71,6 +69,7 @@ return(
   </Routes>
   </Router>
   </div>
+
 )
 
   

@@ -8,17 +8,6 @@ function Navbar() {
         <Link className="nav-link" to="/Home">
           HOME
         </Link>
-
-        <Link className="nav-link" to="/Cart">
-          CART{""}
-          {countCartItems ? (
-            <button className="badge">{countCartItems}</button>
-          ) : (
-            ""
-          )}
-        </Link>
-        {""}
-
         <Link className="nav-link" to="/Login">
           LOGIN
         </Link>
