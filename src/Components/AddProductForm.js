@@ -32,15 +32,18 @@ console.log(car)
 
 
   return (
-    <div>
+    <div><h2>Add you new product here!</h2>
         <form className='form' onSubmit = {handleSubmit}>
         <label htmlFor="image">image</label>
-  <input type="text" name="image" value={car.image} onChange={handleChange}/>
+  <input clasName="label"type="text" name="image" value={car.image} onChange={handleChange}/>
  <label htmlFor="price"> price</label>
+
  <input type="text" name="price" value={car.price} onChange={handleChange}/>
 <label htmlFor="company">company</label>
+
   <input type="text" name="company" value={car.company} onChange={handleChange}/>
   <label htmlFor="info">info</label>
+
   <input type="text" name="info" value={car.info} onChange={handleChange}/>
   <input className="button"type="submit" value="Submit" />
   </form>

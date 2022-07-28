@@ -8,11 +8,14 @@ body{
 
 
 .navbar{
-  background-color: rgb(56, 219, 219);
+  background-color: rgb(18, 216, 216);
   display: flex;
   border-radius: 0px;
   position: top;
   justify-content: space-between;
+}
+.nav-link{
+  color: black;
 }
 
 h1, h2, h3 {
@@ -22,18 +25,22 @@ h1, h2, h3 {
 
 h1 {
  font-size: 18px;
- color: black;
+ color: blue;
  text-align: center;
+ margin: 50px;
+padding-top: 50px;
 }
 
 h2 {
-font-size: 16.5px;
-color:black
+font-size: 25px;
+color:black;
+text-align: center;
+
 
 }
 h3 {
 font-size: 14px;
-color:black
+color:black;
 }
 .row {
   display: flex;
@@ -111,8 +118,10 @@ color:black
   }
 
   .form{
-    color: rgb(192, 28, 192);
+    color: blue;
     justify-content: space-between;
-    border-radius: 16px;
+    margin-block: 200px;
+    padding-left: 200px;
   }
+  
   
