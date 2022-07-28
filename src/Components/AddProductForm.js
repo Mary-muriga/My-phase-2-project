@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 
-export default function AddItemForm() {
+export default function AddProductForm() {
   const[image, setImage]=useState("");
   const[price, setPrice]=useState("");
   const[company, setCompany]=useState("");
@@ -28,7 +28,7 @@ function infoChange(e){
 
 function handleSubmit(e){
   e.preventDefault();
-  const newItem
+  const newProduct= 
 }
   return (
     <div>
