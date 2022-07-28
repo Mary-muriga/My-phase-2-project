@@ -33,7 +33,7 @@ console.log(car)
 
   return (
     <div>
-        <form onSubmit = {handleSubmit}>
+        <form className='form' onSubmit = {handleSubmit}>
         <label htmlFor="image">image</label>
   <input type="text" name="image" value={car.image} onChange={handleChange}/>
  <label htmlFor="price"> price</label>
@@ -42,7 +42,7 @@ console.log(car)
   <input type="text" name="company" value={car.company} onChange={handleChange}/>
   <label htmlFor="info">info</label>
   <input type="text" name="info" value={car.info} onChange={handleChange}/>
-  <input type="submit" value="Submit" />
+  <input className="button"type="submit" value="Submit" />
   </form>
         </div>
   )

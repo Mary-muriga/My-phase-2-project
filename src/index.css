@@ -6,9 +6,6 @@ body{
   display: block;
 }
 
-.App{
-  color: black;
-}
 
 .navbar{
   background-color: rgb(56, 219, 219);
@@ -112,3 +109,10 @@ color:black
   .text-right{
     text-align: right;
   }
+
+  .form{
+    color: rgb(192, 28, 192);
+    justify-content: space-between;
+    border-radius: 16px;
+  }
+  
