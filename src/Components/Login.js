@@ -1,20 +1,21 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
+import React from "react";
+import { useState } from "react";
 
- function Login() {
-    
-  return (
+function Login() {
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastname] = useState("");
+  const handleSubmit = (event) => {
+    event.preventDefault();
+  };
+  return(
     <div>
-        Login page <br/>
-        <Link to="/Login"> Move to Login</Link>
-        <form >
-            <label for="email1">Email</label>
-            <input placeholder='Enter your email...' type="email"/>
-            <label for="pwd1">Password</label>
-            <input placeholder='Enter password' type="password"/>
-        </form>
+      
+      <form onSubmit={handleSubmit}>
+        <input type="text" value={firstName} />
+        <input type="text" value={lastName} />
+        <button tye="submit">Submit</button>
+      </form>
     </div>
-  )
-  
- }
+  );
+}
 export default Login;

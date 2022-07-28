@@ -4,7 +4,7 @@ function Product(props) {
   const { product, onAdd } = props;
   
   return (
-    <div>
+    <div className="col-1">
      <img className="image" src={product.image} alt= "Jeep"/>
       
       <h3>{product.title}</h3>

@@ -64,6 +64,9 @@ return(
   </Routes>
   </Router>
 <hr/>
+<hr/>
+<br/>
+
 <Header countCartItems={cartItems.length}></Header>
 <div className="row">
   <Main onAdd={onAdd} products={products}></Main>
