@@ -57,7 +57,7 @@ function Cart(props) {
             </div>
             <hr/>
             <div className="row ">
-              <button onClick={() => alert('Implement Checkout')}>
+              <button onClick={() => alert('edit me please')}>
                 Checkout
               </button>
             </div>
@@ -69,3 +69,4 @@ function Cart(props) {
 }
 
 export default Cart;
+

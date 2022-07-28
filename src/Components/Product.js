@@ -2,10 +2,10 @@ import React from "react";
 
 function Product(props) {
   const { product, onAdd } = props;
-  console.log(product.image)
+  
   return (
     <div>
-      <img className="image" src={product.image} alt= "Jeep"/>
+     <img className="image" src={product.image} alt= "Jeep"/>
       
       <h3>{product.title}</h3>
       <div>Price: ${product.price}</div>
@@ -15,6 +15,7 @@ function Product(props) {
         <button onClick={() => onAdd(product)}>Add To Cart</button>
       </div>
       <hr/>
+
     </div>
   );
 }
