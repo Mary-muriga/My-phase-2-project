@@ -6,11 +6,16 @@ body{
   display: block;
 }
 
+.App{
+  color: black;
+}
+
 .navbar{
   background-color: rgb(56, 219, 219);
   display: flex;
-  border-radius: 16px;
+  border-radius: 0px;
   position: top;
+  justify-content: space-between;
 }
 
 h1, h2, h3 {
@@ -47,6 +52,7 @@ color:black
   }
   .col-1{
     flex: 1;
+
    }
    
    .col-2 {
@@ -71,8 +77,8 @@ color:black
    align-items: right; 
   }
   
-  .img{
-    max-width: 80px;
+  .image{
+    max-width: 250px;
   }
   
   button { 

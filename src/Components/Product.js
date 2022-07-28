@@ -5,7 +5,7 @@ function Product(props) {
   
   return (
     <div className="col-1">
-     <img className="image" src={product.image} alt= "Jeep"/>
+     <img className="image" src={product.image} alt= "car"/>
       
       <h3>{product.title}</h3>
       <div>Price: ${product.price}</div>

@@ -7,6 +7,7 @@ import Login from "./Components/Login";
 import Home from "./Components/Home";
 import Header from "./Components/Header";
 import Main from "./Components/Main";
+import AddProductForm from "./Components/AddProductForm";
 
 import "./index.css";
 
@@ -21,7 +22,7 @@ function App() {
       .then((response) => response.json())
       .then((products) => setProducts(products));
   }, []);
-   //console.log(products)
+   console.log(products)
 
    const onAdd =(product) => {
     const exist = cartItems.find((x) => x.id === product.id);
@@ -45,6 +46,8 @@ function App() {
      );
     }
 
+    
+
   };
 
 
@@ -59,21 +62,15 @@ return(
     <Navbar />
   </div>
   <Routes>
-    <Route exact path="/Home" element={<Home />}></Route>
-    <Route exact path="/login" element={<Login />}></Route>
+    <Route exact path="/" element={<Home />}/>
+    <Route exact path="/login" element={<Login />}/>
+    <Route exact path="/main" element={<Main products={products} onAdd={onAdd} />}/>
   </Routes>
   </Router>
-<hr/>
-<hr/>
-<br/>
-
-<Header countCartItems={cartItems.length}></Header>
-<div className="row">
-  <Main onAdd={onAdd} products={products}></Main>
-  <Cart onAdd={onAdd} onRemove={onRemove} cartItems={cartItems}></Cart>
-</div>
-
-  
+  <div>
+  <Cart onAdd={onAdd} onRemove={onRemove} cartItems={cartItems}/>
+  <AddProductForm />
+  </div>
   </div>
 
 )

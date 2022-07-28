@@ -1,38 +1,50 @@
 import React, { useState } from 'react'
 
 
-export default function AddProductForm() {
-  const[image, setImage]=useState("");
-  const[price, setPrice]=useState("");
-  const[company, setCompany]=useState("");
-  const[info, setInfo]=useState("");
-
-function imageChange(e){
-  setImage(e.target.value);
-
-}
-function priceChange(e){
-  setPrice(e.target.value);
-
-}
-
-function companyChange(e){
-  setCompany(e.target.value);
-
-}
-
-function infoChange(e){
-  setInfo(e.target.value);
-
+ function AddProductForm() {
+  const[car, setCar]=useState({
+    image: "",
+    price: "",
+    company: "",
+    info: ""
+  });
+  
+function handleChange(e){
+  setCar({...car, [e.target.name]: e.target.value})
+  
 }
 
 function handleSubmit(e){
   e.preventDefault();
-  const newProduct= 
+
+
+fetch("https://simpleshoppingapi.herokuapp.com/cars", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify(car)
+})
+.then((r) => r.json())
+.then((car) => (car));
 }
+console.log(car)
+
+
   return (
     <div>
-        <h4>I am checkout</h4>
+        <form onSubmit = {handleSubmit}>
+        <label htmlFor="image">image</label>
+  <input type="text" name="image" value={car.image} onChange={handleChange}/>
+ <label htmlFor="price"> price</label>
+ <input type="text" name="price" value={car.price} onChange={handleChange}/>
+<label htmlFor="company">company</label>
+  <input type="text" name="company" value={car.company} onChange={handleChange}/>
+  <label htmlFor="info">info</label>
+  <input type="text" name="info" value={car.info} onChange={handleChange}/>
+  <input type="submit" value="Submit" />
+  </form>
         </div>
   )
 }
+export default AddProductForm;
