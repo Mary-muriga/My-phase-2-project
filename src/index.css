@@ -9,8 +9,8 @@ body{
 .navbar{
   background-color: rgb(56, 219, 219);
   display: flex;
-  justify-content: space-between;
   border-radius: 16px;
+  position: top;
 }
 
 h1, h2, h3 {
@@ -20,12 +20,12 @@ h1, h2, h3 {
 
 h1 {
  font-size: 18px;
- color: blanchedalmond;
+ color: black;
 }
 
 h2 {
 font-size: 16.5px;
-color:blanchedalmond
+color:black
 
 }
 h3 {
@@ -46,20 +46,9 @@ color:black
    padding: 2px;
   }
   
- .col-1{
-  flex: 1;
- }
  
- .col-2 {
-  flex: 2;
-  text-align: center;
- }
- .col-3 {
-   flex: 3;
-   text-align: left;
- }
 
- .block {
+ .block{
   background-color: rgb(93, 119, 194);
   padding: 16px;
   margin: 11.2px;

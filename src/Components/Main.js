@@ -5,10 +5,10 @@ function Main(props) {
 
     const {products, onAdd} = props;
   return (
-    <main className="block col-2">
+    <main className="row">
       <h2>Products</h2>
       <hr/>
-      <div className="row"></div>
+      <div className=""></div>
       {products.map((product) =>(
       <Product key={product.id} product={product} onAdd={onAdd}></Product>
       ))}

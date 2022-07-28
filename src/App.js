@@ -51,15 +51,10 @@ function App() {
 return(
 
 
-<div className="App">    
+<div className="App">   
+ 
 
-<Header countCartItems={cartItems.length}></Header>
-<div className="row">
-  <Main onAdd={onAdd} products={products}></Main>
-  <Cart onAdd={onAdd} onRemove={onRemove} cartItems={cartItems}></Cart>
-</div>
-
-  <Router>
+<Router>
   <div>
     <Navbar />
   </div>
@@ -68,6 +63,14 @@ return(
     <Route exact path="/login" element={<Login />}></Route>
   </Routes>
   </Router>
+<hr/>
+<Header countCartItems={cartItems.length}></Header>
+<div className="row">
+  <Main onAdd={onAdd} products={products}></Main>
+  <Cart onAdd={onAdd} onRemove={onRemove} cartItems={cartItems}></Cart>
+</div>
+
+  
   </div>
 
 )

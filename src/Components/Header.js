@@ -6,13 +6,11 @@ function Header(props) {
   return (
     <header className="row-block-1">
       <div>
-      
-        <a href="#/">
+
           <h1>Simple Shopping Cart</h1>
-        </a>
+    
       </div>
       <div>
-        <a href="#/cart">  
         Cart{''}
         {countCartItems ? (
             <button className="badge">{countCartItems}</button>
@@ -20,9 +18,7 @@ function Header(props) {
             ''
         )
         }
-        </a> {''}
-        < a href="#/login"> Login</a>
-        
+         {''}
       </div>
     </header>
   );
