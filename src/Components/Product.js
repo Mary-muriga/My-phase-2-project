@@ -4,8 +4,13 @@ function Product(props) {
   const { product, onAdd } = props;
 
   function handleDeleteClick(){
-    console.log(product);
+    fetch(`https://simpleshoppingapi.herokuapp.com/cars/${product.id}`, {
+      method: "DELETE",
+    })
+    .then((r) => r.json())
+    .then(() => console.log("deleted"));
   }
+  //console.log(product);
   
   return (
     <div className="col-1">

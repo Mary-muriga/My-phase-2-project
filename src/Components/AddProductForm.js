@@ -28,7 +28,7 @@ fetch("https://simpleshoppingapi.herokuapp.com/cars", {
 .then((r) => r.json())
 .then((car) => (car));
 }
-console.log(car)
+//console.log(car)
 
 
   return (

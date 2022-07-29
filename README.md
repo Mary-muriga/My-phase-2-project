@@ -21,6 +21,15 @@ For production build
 
 `npm run build`
 
+## Authors
+Mary Muriga
+@https://github.com/Mary-muriga
+
+## License
+
+
+
+
 
 
 
