@@ -3,8 +3,8 @@ import React from "react";
 function Product(props) {
   const { product, onAdd } = props;
 
-  function handleDelete(){
-    console.log(item);
+  function handleDeleteClick(){
+    console.log(product);
   }
   
   return (
@@ -17,6 +17,9 @@ function Product(props) {
       <div>Info: {product.info}</div>
       <div>
         <button onClick={() => onAdd(product)}>Add To Cart</button>
+      </div>
+      <div>
+        <button className="remove" onClick={handleDeleteClick}>Delete</button>
       </div>
       <hr/>
 

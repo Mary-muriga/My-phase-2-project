@@ -90,9 +90,8 @@ color:black;
     font-size: 12.8px;  
     padding: 3.2px;
     margin: 1.6px;
-    border-radius: 1.0rem;
-    background-color: rgb(240, 142, 15);
-    width: 35%;
+    border-radius: 16px;
+    background-color: rgb(136, 93, 36);
     cursor: pointer;
   }
   button.add {
@@ -102,9 +101,9 @@ color:black;
   }
   
   button.remove {
-    background-color: rgb(187, 92, 116);
-    width: 24px;
-    border-radius: 8px;
+    background-color: rgb(206, 16, 63);
+
+    border-radius: 12px;
   }
   
   button.badge {
