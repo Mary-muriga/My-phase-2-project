@@ -2,6 +2,10 @@ import React from "react";
 
 function Product(props) {
   const { product, onAdd } = props;
+
+  function handleDelete(){
+    console.log(item);
+  }
   
   return (
     <div className="col-1">
