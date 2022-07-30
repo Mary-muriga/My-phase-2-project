@@ -8,20 +8,21 @@ body {
 .navbar {
   background-color: rgb(18, 216, 216);
   display: flex;
-  border-radius: 0px;
   position: top;
   justify-content: space-between;
   height: 200px;
+  border: solid orange;
 }
 .nav-link {
   color: black;
   text-align: center;
   padding-top: 30px;
-  margin: 100px;
+  margin: 30px;
+  border: solid red;
 }
-nav a.active {
+.nav-link.active {
   color: red;
-  border: solid black;
+
 }
 
 h1,
@@ -117,4 +118,7 @@ button {
   width: 70px;
   text-decoration: none;
   color: rgb(13, 13, 216);
+}
+.label-text{
+  color:blue;
 }

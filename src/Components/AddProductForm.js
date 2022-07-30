@@ -34,18 +34,18 @@ fetch("https://simpleshoppingapi.herokuapp.com/cars", {
   return (
     <div className='form'> 
       <h2>Add your new product here!</h2>
-      <h2> Then  go back to showroom to see the results.</h2>
+      <h2> Then  go back to the showroom to see the results.</h2>
           
         <form className="addcar"onSubmit = {handleSubmit}>
-        {/* <label htmlFor="image">image</label> */}
+        <label className ="label-text"htmlFor="image">Image</label>
   <input  className="form-1"placeholder= "enter the image"type="text" name="image" value={car.image} onChange={handleChange}/>
- {/* <label htmlFor="price"> price</label> */}
+ <label className ="label-text" htmlFor="price"> Price</label>
 
  <input  className="form-1" placeholder="enter the price"type="text" name="price" value={car.price} onChange={handleChange}/>
-{/* <label htmlFor="company">company</label> */}
+<label className ="label-text" htmlFor="company">Company</label>
 
   <input  className="form-1" placeholder="enter company"type="text" name="company"  value={car.company} onChange={handleChange}/>
-  {/* <label htmlFor="info">info</label> */}
+  <label className ="label-text" htmlFor="info">Info</label>
 
   <input  className="form-1" placeholder="enter the info" type="text" name="info" value={car.info} onChange={handleChange}/>
   <input className="sub" type="submit" value="Submit" />
