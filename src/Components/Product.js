@@ -1,16 +1,18 @@
 import React from "react";
 
-function Product(props) {
-  const { product, onAdd } = props;
-
-  function handleDeleteClick(){
-    fetch(`https://simpleshoppingapi.herokuapp.com/cars/${product.id}`, {
-      method: "DELETE",
+function Product({ product, onAdd , handleDelete}) {
+  
+  
+  function handleDeleteClick(e){
+    let id = (e.target.id)
+    
+    fetch(`https://simpleshoppingapi.herokuapp.com/cars/${id}`, {
+     method: "DELETE",
     })
     .then((r) => r.json())
-    .then(() => console.log("deleted"));
+    .then((deletedItem) => handleDelete(deletedItem));
   }
-  //console.log(product);
+  //console.log(product.id);
   
   return (
     <div className="col-1">
@@ -24,7 +26,7 @@ function Product(props) {
         <button onClick={() => onAdd(product)}>Add To Cart</button>
       </div>
       <div>
-        <button className="remove" onClick={handleDeleteClick}>Delete</button>
+        <button id={product.id} className="remove" onClick={handleDeleteClick}>Delete</button>
       </div>
       <hr/>
 

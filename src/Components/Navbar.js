@@ -15,11 +15,6 @@ function Navbar() {
         <Link className="nav-link" to="/AddProductForm">
           ADD PRODUCT
         </Link>
-      
-        <Link className="nav-link" to="/Cart">
-          CART ITEMS
-        </Link>
-
         
       </nav>
     

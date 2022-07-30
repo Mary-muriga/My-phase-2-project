@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 
- function AddProductForm() {
+ function AddProductForm({onAddCar}) {
   const[car, setCar]=useState({
     image: "",
     price: "",
@@ -26,29 +26,29 @@ fetch("https://simpleshoppingapi.herokuapp.com/cars", {
   body: JSON.stringify(car)
 })
 .then((r) => r.json())
-.then((car) => (car));
+.then((car) => onAddCar(car));
 }
 //console.log(car)
 
 
   return (
-    <div> 
+    <div className='form'> 
       <h2>Add your new product here!</h2>
       <h2> Then  go back to showroom to see the results.</h2>
           
-        <form className='form' onSubmit = {handleSubmit}>
-        <label htmlFor="image">image</label>
-  <input clasName="label"type="text" name="image" value={car.image} onChange={handleChange}/>
- <label htmlFor="price"> price</label>
+        <form className="addcar"onSubmit = {handleSubmit}>
+        {/* <label htmlFor="image">image</label> */}
+  <input  className="form-1"placeholder= "enter the image"type="text" name="image" value={car.image} onChange={handleChange}/>
+ {/* <label htmlFor="price"> price</label> */}
 
- <input type="text" name="price" value={car.price} onChange={handleChange}/>
-<label htmlFor="company">company</label>
+ <input  className="form-1" placeholder="enter the price"type="text" name="price" value={car.price} onChange={handleChange}/>
+{/* <label htmlFor="company">company</label> */}
 
-  <input type="text" name="company" value={car.company} onChange={handleChange}/>
-  <label htmlFor="info">info</label>
+  <input  className="form-1" placeholder="enter company"type="text" name="company"  value={car.company} onChange={handleChange}/>
+  {/* <label htmlFor="info">info</label> */}
 
-  <input type="text" name="info" value={car.info} onChange={handleChange}/>
-  <input className="button"type="submit" value="Submit" />
+  <input  className="form-1" placeholder="enter the info" type="text" name="info" value={car.info} onChange={handleChange}/>
+  <input className="sub" type="submit" value="Submit" />
   </form>
         </div>
   )

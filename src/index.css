@@ -1,136 +1,120 @@
-
-body{
-  background-color:aliceblue;
+body {
+  background-color: aliceblue;
   margin: 0.5px;
   padding: 15px;
   display: block;
 }
 
-
-.navbar{
+.navbar {
   background-color: rgb(18, 216, 216);
   display: flex;
   border-radius: 0px;
   position: top;
   justify-content: space-between;
   height: 200px;
-  
 }
-.nav-link{
+.nav-link {
   color: black;
   text-align: center;
   padding-top: 30px;
   margin: 100px;
-  
+}
+nav a.active {
+  color: red;
+  border: solid black;
 }
 
-h1, h2, h3 {
-   
+h1,
+h2,
+h3 {
   margin: 8.25px 0;
 }
 
 h1 {
- font-size: 18px;
- color: blue;
- text-align: center;
- margin: 50px;
-padding-top: 50px;
+  font-size: 18px;
+  color: blue;
+  text-align: center;
+  margin: 50px;
+  padding-top: 50px;
 }
 
 h2 {
-font-size: 25px;
-color:black;
-text-align: center;
+  padding: 3px;
+  margin: 10px;
+  font-size: 25px;
+  color: rgb(38, 38, 100);
+  text-align: justify;
 
-
+}
+.h2-2{
+  text-align: center;
 }
 h3 {
-font-size: 14px;
-color:black;
+  font-size: 14px;
+  color: black;
 }
-.row {
-  display: flex;
-  justify-content: space-between;
- }
- 
- .row-block-1 {
-   display: flex;
-   justify-content: space-between;
-   background-color:rgb(18, 156, 156);
-   border-radius: 17px;
-   margin: 5px;
-   padding: 2px;
-  }
-  .col-1{
-    flex: 1;
 
-   }
-   
-   .col-2 {
-    flex: 2;
-    text-align: center;
-   }
-   .col-3 {
-     flex: 3;
-     text-align: left;
-   }
- 
+.col-1 {
+  flex: 1;
+}
 
- .block{
+.col-2 {
+  flex: 2;
+  text-align: center;
+}
+
+.block {
   background-color: rgb(93, 119, 194);
   padding: 16px;
   margin: 11.2px;
   border-radius: 16px;
-  
-  }
-  
-  .row.center {
-   align-items: right; 
-  }
-  
-  .image{
-    max-width: 250px;
-    height: 100px;
-  }
-  
-  button { 
-    font-size: 12.8px;  
-    padding: 3.2px;
-    margin: 1.6px;
-    border-radius: 16px;
-    background-color: rgb(136, 93, 36);
-    cursor: pointer;
-  }
-  button.add {
-    background-color: rgb(197, 207, 207);
-    width: 24px;
-    border-radius: 8px;
-  }
-  
-  button.remove {
-    background-color: rgb(206, 16, 63);
+}
 
-    border-radius: 12px;
-  }
-  
-  button.badge {
-    background-color: rgb(241, 19, 74);
-    width: 24px;
-    color: white;
-    border-radius: 8px;
-  }
-  .text-right{
-    text-align: right;
-  }
+.row.center {
+  align-items: right;
+}
 
-  .form{
-    color: blue;
-    justify-content: space-between;
-    margin-block: 200px;
-    padding-left: 200px;
-  }
-   .img{
-    height: 50px;
-    width: 50px;
-   }
-  
+.image {
+  max-width: 250px;
+  height: 150px;
+}
+
+button {
+  font-size: 12.8px;
+  padding: 3.2px;
+  margin: 1.6px;
+  border-radius: 16px;
+  background-color: rgb(136, 93, 36);
+  cursor: pointer;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.form {
+  margin-block: 200px;
+  padding-left: 300px;
+  flex-direction: column;
+  text-align: justify;
+}
+.addcar {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border-radius: 20px;
+}
+.form-1 {
+  display: flex;
+  padding: 10px;
+  margin-bottom: 15px;
+  width: 500px;
+  border-radius: 10px;
+}
+.sub {
+  display: flex;
+  background-color: rgb(197, 186, 186);
+  width: 70px;
+  text-decoration: none;
+  color: rgb(13, 13, 216);
+}
