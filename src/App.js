@@ -19,15 +19,14 @@ function App(props) {
       .then((products) => setProducts(products));
   }, [products]);
 
-  function handleDelete(deletedItem){
-   const updateItems =products.filter (item => item.id !== deletedItem.id)
-   setProducts(updateItems)
+  function handleDelete(deletedItem) {
+    const updateItems = products.filter((item) => item.id !== deletedItem.id);
+    setProducts(updateItems);
   }
 
-  //console.log(products)
-  function onAddCar(car){
-    setProducts([...products, car])
-
+  
+  function onAddCar(car) {
+    setProducts([...products, car]);
   }
 
   return (
@@ -38,13 +37,22 @@ function App(props) {
         </div>
         <Routes>
           <Route exact path="/" element={<Home />} />
-          <Route exact path="/AddProductForm" element={<AddProductForm  onAddCar={onAddCar}/>} />
+          <Route
+            exact
+            path="/AddProductForm"
+            element={<AddProductForm onAddCar={onAddCar} />}
+          />
           <Route
             exact
             path="/main"
-            element={<Main products={products} onAdd={onAdd} handleDelete={handleDelete} />}
+            element={
+              <Main
+                products={products}
+                onAdd={onAdd}
+                handleDelete={handleDelete}
+              />
+            }
           />
-          
         </Routes>
       </Router>
     </div>

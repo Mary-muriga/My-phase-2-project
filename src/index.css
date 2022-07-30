@@ -11,18 +11,17 @@ body {
   position: top;
   justify-content: space-between;
   height: 200px;
-  border: solid orange;
+
 }
 .nav-link {
   color: black;
   text-align: center;
   padding-top: 30px;
   margin: 30px;
-  border: solid red;
+  
 }
 .nav-link.active {
   color: red;
-
 }
 
 h1,
@@ -45,9 +44,8 @@ h2 {
   font-size: 25px;
   color: rgb(38, 38, 100);
   text-align: justify;
-
 }
-.h2-2{
+.h2-2 {
   text-align: center;
 }
 h3 {
@@ -119,6 +117,6 @@ button {
   text-decoration: none;
   color: rgb(13, 13, 216);
 }
-.label-text{
-  color:blue;
+.label-text {
+  color: blue;
 }
