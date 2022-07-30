@@ -32,7 +32,10 @@ fetch("https://simpleshoppingapi.herokuapp.com/cars", {
 
 
   return (
-    <div><h2>Add you new product here!</h2>
+    <div> 
+      <h2>Add your new product here!</h2>
+      <h2> Then  go back to showroom to see the results.</h2>
+          
         <form className='form' onSubmit = {handleSubmit}>
         <label htmlFor="image">image</label>
   <input clasName="label"type="text" name="image" value={car.image} onChange={handleChange}/>

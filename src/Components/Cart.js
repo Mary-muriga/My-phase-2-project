@@ -4,7 +4,7 @@ import  {useState} from "react";
 
 
 function Cart(props) {
- // const { cartItems} = props;
+ 
   const itemsPrice = cartItems.reduce((d, c) => d + c.price * c.qty, 0);
   const taxPrice = itemsPrice * 0.14;
   const shippingPrice = itemsPrice > 2000 ? 0 : 50;

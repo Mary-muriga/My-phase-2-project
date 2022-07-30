@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 //import Login from "./Components/Login";
 import Home from "./Components/Home";
-import Header from "./Components/Header";
+//import Header from "./Components/Header";
 import Main from "./Components/Main";
 import AddProductForm from "./Components/AddProductForm";
 
@@ -20,9 +20,11 @@ function App(props) {
       .then((response) => response.json())
       .then((products) => setProducts(products));
   }, []);
-  //console.log(products)
 
-  
+  // function handleDeleteProduct(){
+  // console.log(deletedProduct)
+
+  //console.log(products)
 
   return (
     <div className="App">
@@ -33,7 +35,6 @@ function App(props) {
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route exact path="/AddProductForm" element={<AddProductForm />} />
-          {/* <Route exact path="/login" element={<Login />}/> */}
           <Route
             exact
             path="/main"
