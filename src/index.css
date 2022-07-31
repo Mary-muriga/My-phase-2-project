@@ -13,7 +13,7 @@ body {
   height: 200px;
 
 }
-.nav-link {
+.nav-link-active {
   color: black;
   text-align: center;
   padding-top: 30px;
@@ -21,7 +21,7 @@ body {
   
 }
 .nav-link.active {
-  color: red;
+  color: rgb(221, 190, 17);
 }
 
 h1,

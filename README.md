@@ -1,5 +1,5 @@
 # Project name: Simple Shopping Cart
-This project used to display different models of cars where the user can be able view details and add to cart. 
+This project used to display different models of cars in  a showroom where the user can be able view details and add new product and delete. 
 
 
 ## Setup
