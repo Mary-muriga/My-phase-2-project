@@ -41,7 +41,7 @@ ReactJS - Building component based UI
 Mary Muriga
 @https://github.com/Mary-muriga
 
-## Project link
+## Project live link
 
 https://mary-muriga.github.io/
 
