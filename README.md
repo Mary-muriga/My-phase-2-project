@@ -43,11 +43,13 @@ Mary Muriga
 
 ## Project live link
 
-https://mary-muriga.github.io/
+https://mary-muriga.github.io/My-phase-2-project/
 
-## Project API
+## Project API(Backend)
 
-https://github.com/Mary-muriga/Shopping--API
+My repo link: https://github.com/Mary-muriga/Shopping--API
+
+My deployed link: https://simpleshoppingapi.herokuapp.com/cars
 
 ## License
 
